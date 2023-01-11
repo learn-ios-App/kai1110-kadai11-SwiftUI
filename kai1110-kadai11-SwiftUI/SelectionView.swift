@@ -14,7 +14,7 @@ struct SelectionView: View {
                         selection = prefecture
                         isPresentSelectionView = false
                     }) {
-                        Text("\(prefecture)")
+                        Text(prefecture)
                         Spacer()
                     }
                 }
@@ -28,10 +28,9 @@ struct SelectionView: View {
                         Text("cancel")
                     }
                 }
-                ToolbarItem(placement: .principal) {
-                    Text("都道府県")
-                }
             }
+            .navigationTitle("都道府県")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
